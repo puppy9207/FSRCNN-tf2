@@ -45,7 +45,6 @@ def make_dataset(paths, scale):
             
             startx_hr = i * size_hr
             endx_hr = (i * size_hr) + size_hr
-            
             for j in range(0, numy):
                 starty = j * size_lr
                 endy = (j * size_lr) + size_lr
@@ -58,6 +57,8 @@ def make_dataset(paths, scale):
                 x = crop_lr.reshape((size_lr, size_lr, 1))
                 y = crop_hr.reshape((size_hr, size_hr, 1))
                 yield x, y
+                
+        
 
 def make_val_dataset(paths, scale):
     """
