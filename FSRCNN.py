@@ -6,7 +6,7 @@ def FSRCNN(scale, d, s, m):
     channels = 1
     PS = channels * (scale*scale)
 
-    input_img = Input(shape=(None,None, channels))
+    input_img = Input(shape=( None,None, channels))
 
     model = Conv2D(d, (5, 5), padding='same', kernel_initializer='he_normal')(input_img)
     model = LeakyReLU()(model)

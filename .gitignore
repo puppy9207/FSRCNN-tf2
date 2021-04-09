@@ -107,7 +107,8 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-/augmented
+augmented/
+data/
 # Environments
 # .env
 .env/

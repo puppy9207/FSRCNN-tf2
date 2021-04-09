@@ -9,15 +9,6 @@ import time
 import os
 
 
-def tf_log10(x):
-  numerator = tf.log(x)
-  denominator = tf.log(tf.constant(10, dtype=numerator.dtype))
-  return numerator / denominator
-
-def PSNR(y_true, y_pred):
-	max_pixel = 1.0
-	return 10.0 * tf_log10((max_pixel ** 2) / (K.mean(K.square(y_pred - y_true)))) 
-
 class run:
     def __init__(self,scale, batch, epochs, params,validdir,checkpoint_dir="./ckpt"):
         self.now = None
