@@ -5,8 +5,9 @@
 - 참고한 깃허브 리포짓은 [이곳](https://github.com/Saafke/FSRCNN_Tensorflow) 입니다 
 - 참고한 리포짓와 차이점은 크게
   1. 마지막 layer가 nn.depth_to_space 에서 Conv2DTranspose로 변경했습니다.
-  1. 데이터셋이 다릅니다
-  1. Keras로 변경되었습니다.
+  2. PReLU가 ReLU로 변경되었습니다(이것은 이유가 있어 PReLU나 LeakyReLU를 사용하지 못합니다)
+  3. 데이터셋이 다릅니다
+  4. Keras로 변경되었습니다.
   
 - 제가 생각하는 문제점은 다음과 같습니다.
   1. 실행했을때 loss값이 급격하게 떨어지는 점
